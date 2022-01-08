@@ -138,6 +138,21 @@ h1 {
 }
 
 
+/* predefined */
+
+.attribution { 
+    position: absolute;
+    bottom: 10px;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .wrapper {
@@ -193,20 +208,22 @@ h1 {
         margin-bottom: 30px;
     }
 
-    .attribution {
+    /*.attribution {
         visibility: hidden;
-    }
+    }*/
 } 
 
-/* predefined */
 
-.attribution { 
-    position: absolute;
-    bottom: 10px;
-    font-size: 11px; 
-    text-align: center; 
+
+/* hide attribution if screen is too small */
+@media only screen and (max-width: 600px) and (max-height: 680px) {
+    .attribution {
+        display: none;
+    }
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+@media only screen and (min-width: 601px) and (max-height: 840px) {
+    .attribution {
+        display: none;
+    }
 }
